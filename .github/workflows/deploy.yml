@@ -1,0 +1,15 @@
+name: Colab Auto Deploy
+on:
+  workflow_dispatch: # 코랩에서 수동으로 실행(트리거)할 수 있도록 설정
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Run Build and Test
+        run: |
+          echo "🚀 코랩 AI가 작성한 배포 파이프라인이 정상 작동 중입니다!"
+          echo "최신 코드를 빌드하고 서버에 반영하는 과정을 시뮬레이션합니다."
